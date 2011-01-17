@@ -2,6 +2,8 @@
 fib := method(nth, 
         if(nth  > 2, fib(nth-1) + fib(nth-2), 1))
 
+Assert
+
 Assert(fib(1), 1) 
 Assert(fib(2), 1) 
 Assert(fib(3), 2) 
