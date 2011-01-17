@@ -1,4 +1,9 @@
 
 Assert := method(value, expected, 
-                ((call message argAt(0)) .. " == " .. expected) print
-                (if (value == expected, " passed", " failed, got " .. value .. " instead ")) println)
+                expectation := call message argAt(0) .. " == " .. expected
+                passed := value == expected
+
+                passed ifTrue("\tPASSED " print) ifFalse("\tFAILED " print)
+                expectation print
+                passed ifFalse((" got " .. value .. " instead ") print)
+                "\n" print)

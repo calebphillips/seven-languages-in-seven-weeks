@@ -3,9 +3,7 @@ Assert
 List add2d := method(self flatten sum)
 
 
-list(list(1,2,3,4), list(2), list(3)) add2d println
-
-/* "\nOne dimensional adding works" println */
+"\nOne dimensional adding works" println
 Assert(list(1,2,3) add2d, 6)
 Assert(list(9,14,75) add2d, 98)
 
