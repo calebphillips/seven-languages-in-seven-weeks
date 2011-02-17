@@ -1,10 +1,5 @@
 
 concatenate([], List, List).
+concatenate([Head|Tail1], List, [Head|Tail2]) :- concatenate(Tail1, List, Tail2).
 
-% Note that [|] is not an operator that does something to a list,
-% It just specifies a rule that can match a list the has the Head
-% and List as its tail.
-concatenate([Head|[]], List, [Head|List]).
-
-concatenate([Head1|[Head2|[]]], List, [Head1, Head2|List]).
-concatenate([Head1|[Head2|[Head3|[]]]], List, [Head1, Head2, Head3|List]).
+% concatenate([1,2] [3], What)
