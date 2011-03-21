@@ -1,4 +1,4 @@
--module(caleb).
+-module(day_one).
 -export([count_words/1]).
 -export([count_to_ten/0]).
 -export([s_or_f/1]).
